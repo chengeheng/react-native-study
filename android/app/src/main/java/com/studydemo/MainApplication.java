@@ -1,4 +1,4 @@
-package com.thirddemo;
+package com.studydemo;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,29 +1,32 @@
 import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 
-const HomeScreen = props => {
+const PageB = props => {
+  console.log(props.navigation);
+  let {source} = props.route.params;
   return (
     <View style={styles.main}>
-      <Text>HomeScreen</Text>
+      <Text>DetailPage-B</Text>
       <View style={styles.button}>
         <Button
           onPress={e => {
-            props.navigation.navigate('Details');
+            props.navigation.navigate('pageA');
           }}
-          title={'navigate to Details'}></Button>
+          title={'navigate to pageA'}></Button>
       </View>
       <View style={styles.button}>
         <Button
           onPress={e => {
-            props.navigation.push('Details');
+            props.navigation.push('pageA');
           }}
-          title={'push to Details'}></Button>
+          title={'push to pageA'}></Button>
       </View>
+      <Text style={{margin: 10}}>the text from others is: {source}</Text>
     </View>
   );
 };
 
-export default HomeScreen;
+export default PageB;
 
 const styles = StyleSheet.create({
   main: {

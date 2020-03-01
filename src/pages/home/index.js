@@ -19,6 +19,20 @@ const HomeScreen = props => {
           }}
           title={'push to Details'}></Button>
       </View>
+      <View style={styles.button}>
+        <Button
+          onPress={e => {
+            props.navigation.goBack();
+          }}
+          title={'go Back'}></Button>
+      </View>
+      <View style={styles.button}>
+        <Button
+          onPress={e => {
+            props.navigation.popToTop();
+          }}
+          title={'popToTop'}></Button>
+      </View>
     </View>
   );
 };

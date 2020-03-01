@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 
 const PageB = props => {
-  console.log(props.navigation);
   let {source} = props.route.params;
   return (
     <View style={styles.main}>
@@ -20,6 +19,15 @@ const PageB = props => {
             props.navigation.push('pageA');
           }}
           title={'push to pageA'}></Button>
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="setParams"
+          onPress={e =>
+            props.navigation.setParams({
+              source: 'pageB by setParams',
+            })
+          }></Button>
       </View>
       <Text style={{margin: 10}}>the text from others is: {source}</Text>
     </View>

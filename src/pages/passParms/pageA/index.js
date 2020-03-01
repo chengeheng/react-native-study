@@ -11,7 +11,7 @@ class PageA extends React.Component {
             title="navigate to pageB"
             onPress={e =>
               this.props.navigation.navigate('pageB', {
-                source: 'navigate from PageA',
+                source: 'navigate from PageA by navigate',
               })
             }></Button>
         </View>
@@ -20,7 +20,7 @@ class PageA extends React.Component {
             title="push to pageB"
             onPress={e =>
               this.props.navigation.push('pageB', {
-                source: 'navigate from pageB',
+                source: 'navigate from PageA by push',
               })
             }></Button>
         </View>
